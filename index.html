@@ -1,39 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ismail Abdullah - Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismail Abdullah | Professional Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #003366; /* Diplomatic Blue */
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #bdc3c7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .container {
+            max-width: 800px;
+            margin: -80px auto 0;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            object-fit: cover;
+            background-color: #eee;
+        }
+        .section-title {
+            color: #003366;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .content-text {
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #003366;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; line-height: 1.6; text-align: center;">
+<body>
 
-    <img src="photo.jpg" alt="Ismail Abdullah" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #333;">
+    <header>
+        <h1>Ismail Abdullah</h1>
+        <div class="subtitle">Politician • Diplomat • Writer • Researcher</div>
+    </header>
 
-    <h1>Ismail Abdullah</h1>
-    <h3>Politician | Diplomat | Writer | Researcher</h3>
-    <hr>
-
-    <div style="text-align: left;">
-        <p><strong>About Me</strong></p>
-        <p>I am a politician and diplomat born in the Erbil Citadel. My work focuses on international relations, regional stability, and infrastructure development.</p>
-
-        <p><strong>Professional Work</strong></p>
-        <p>I conduct research on diplomatic strategy and history (specifically WWI & WWII). I recently authored the article:</p>
-
-        <p>
-            👉 <a href="https://www.example.com/link-to-your-article" target="_blank" style="color: blue; font-weight: bold;">
-                South Korean Investments in Kurdistan's Infrastructure: Assessing Long-term Benefits and Challenges
-            </a>
-        </p>
-
-        <p><strong>Interests</strong></p>
-        <p>Beyond politics, I am passionate about technology, literary themes in film, and historical analysis.</p>
-
-        <p><strong>Contact</strong></p>
-        <p>I am available for speaking engagements and consultation.</p>
+    <div class="container">
+        <img src="photo.jpg" alt="Ismail Abdullah" class="profile-photo">
         
-        <p>
-            <a href="mailto:your-email@example.com" style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Email Me</a>
-        </p>
+        <div class="content-text">
+            <h2 class="section-title">About Me</h2>
+            <p>I am a politician and diplomat born in the historic Erbil Citadel. With a deep commitment to regional stability, I focus on international relations and infrastructure development in the Kurdistan Region.</p>
+            
+            <h2 class="section-title">Publications & Research</h2>
+            <p>My work combines diplomatic engagement with rigorous analysis. I am the author of the article:</p>
+            
+            <p style="background-color: #f0f7ff; padding: 15px; border-left: 5px solid #003366; font-weight: bold; color: #003366;">
+                "South Korean Investments in Kurdistan's Infrastructure: Assessing Long-term Benefits and Challenges"
+            </p>
+
+            <h2 class="section-title">Areas of Expertise</h2>
+            <ul>
+                <li><strong>Diplomacy & Politics:</strong> Regional Kurdish politics and international relations.</li>
+                <li><strong>Historical Research:</strong> Specializing in WWI and WWII history.</li>
+                <li><strong>Literature:</strong> Analysis of literary themes in books and film.</li>
+            </ul>
+
+            <h2 class="section-title">Contact</h2>
+            <p>I am available for consultation and speaking engagements.</p>
+            <center>
+                <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
+            </center>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 Ismail Abdullah. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
