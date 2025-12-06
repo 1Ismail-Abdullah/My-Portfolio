@@ -17,15 +17,15 @@
         header {
             background-color: #003366; /* Diplomatic Blue */
             color: white;
-            padding: 60px 20px 100px; /* Extra padding at bottom for the overlap */
+            padding: 60px 20px 110px; /* Extra padding for overlap */
             text-align: center;
         }
         /* PHOTO STYLING */
         .profile-photo {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 5px solid white;
             object-fit: cover;
             margin-bottom: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -38,7 +38,7 @@
         }
         .titles {
             font-size: 1.1em;
-            margin-top: 5px;
+            margin-top: 8px;
             color: #bdc3c7;
             font-weight: 500;
             text-transform: uppercase;
@@ -50,10 +50,13 @@
             color: #fff;
             font-style: italic;
             opacity: 0.9;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-top: 10px;
         }
         .container {
-            max-width: 800px;
-            margin: -60px auto 40px; /* Pulls box up to overlap header */
+            max-width: 850px;
+            margin: -70px auto 40px; /* Pulls box up to overlap header */
             background: white;
             padding: 40px;
             border-radius: 8px;
@@ -63,46 +66,79 @@
             color: #003366;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-top: 50px;
+            margin-bottom: 25px;
             text-align: left;
+            font-size: 1.5em;
         }
-        /* LINKS LIST STYLING */
+        /* LIST STYLES */
         .link-list {
             list-style: none;
             padding: 0;
             text-align: left;
         }
         .link-list li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .link-list a {
             text-decoration: none;
             color: #003366;
             font-weight: 600;
             display: block;
-            padding: 10px;
+            padding: 12px;
             background-color: #f9f9f9;
             border-left: 4px solid #003366;
             transition: 0.2s;
+            border-radius: 0 5px 5px 0;
         }
         .link-list a:hover {
             background-color: #eef6ff;
-            padding-left: 15px;
+            padding-left: 18px;
         }
-        /* EXPERIENCE & EDUCATION ITEMS */
+        /* TIMELINE (Experience/Education) */
         .timeline-item {
             text-align: left;
-            margin-bottom: 20px;
-            border-left: 3px solid #ddd;
-            padding-left: 15px;
+            margin-bottom: 25px;
+            border-left: 3px solid #003366;
+            padding-left: 20px;
+            position: relative;
         }
-        .timeline-item h3 { margin: 0; color: #333; }
-        .timeline-item span { color: #777; font-size: 0.9em; display: block; margin-bottom: 5px; }
-        
-        /* SOCIAL MEDIA BUTTONS */
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #003366;
+            border-radius: 50%;
+            position: absolute;
+            left: -7.5px;
+            top: 5px;
+        }
+        .timeline-item h3 { margin: 0; color: #333; font-size: 1.1em; }
+        .timeline-item .role-meta { color: #666; font-size: 0.9em; display: block; margin-bottom: 8px; font-weight: 500;}
+        .timeline-item p { margin: 0; color: #555; font-size: 0.95em; }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background-color: #eef6ff;
+            color: #003366;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        /* CONTACT & SOCIAL */
+        .contact-info p {
+            margin: 10px 0;
+            text-align: left;
+        }
         .social-links {
-            margin-top: 20px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -112,7 +148,7 @@
             display: inline-block;
             background-color: #003366;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 0.9em;
@@ -123,9 +159,11 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: #777;
             font-size: 0.9em;
+            background-color: #fff;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -143,57 +181,89 @@
         
         <h2 class="section-title">About Me</h2>
         <p style="text-align: left;">
-            I am a journalist, activist, and author born in the historic Erbil Citadel. With a deep commitment to truth and cultural preservation, I focus on regional stability, international relations, and literature. My work spans translation, political analysis, and advocacy for the Kurdistan Region.
+            I am a communications and diplomacy professional born in the historic Erbil Citadel. With a deep commitment to regional stability, I bridge policy and culture through media, research, and advocacy. 
         </p>
+        <p style="text-align: left;">
+            From leading PR at the Book Project Organization to managing programs for civil society, I turn complex ideas into strategic narratives. My work focuses on international relations, infrastructure development, and preserving the cultural heritage of the Kurdistan Region.
+        </p>
+
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Public Relations & Media</span>
+            <span class="skill-tag">International Relations</span>
+            <span class="skill-tag">Diplomatic Protocol</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Political Analysis</span>
+            <span class="skill-tag">Translation (Kurdish/English/Arabic)</span>
+            <span class="skill-tag">Voice Acting</span>
+            <span class="skill-tag">Crisis Management</span>
+        </div>
+
+        <h2 class="section-title">Education</h2>
+        <div class="timeline-item">
+            <h3>Bachelor of International Relations and Diplomacy</h3>
+            <span class="role-meta">Salahaddin University-Erbil | College of Political Sciences | 2020 – 2024</span>
+        </div>
+
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="timeline-item">
+            <h3>Director of Media and Public Relations</h3>
+            <span class="role-meta">Book Project Organization for Culture and Development | May 2023 – Present</span>
+            <p>Leading media strategies and public outreach initiatives.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Head of Environment & Program Manager</h3>
+            <span class="role-meta">Public Aid Organization (PAO) | July 2023 – Present</span>
+            <p>Managing environmental programs and community development projects.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Journalist</h3>
+            <span class="role-meta">Kurdish Globe Journal | Sept 2024 – Present</span>
+            <p>Reporting on regional developments and political analysis.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Organizer and Researcher</h3>
+            <span class="role-meta">Rudaw Research Center | Jan 2025 – Present</span>
+            <p> conducting research and organizing strategic forums.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Intern</h3>
+            <span class="role-meta">Department of Foreign Relations (KRG) | Nov 2024 – Dec 2024</span>
+            <p>Assisted in diplomatic protocol and international communications.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Project Manager</h3>
+            <span class="role-meta">Hasar Organization | Dec 2022 – Dec 2024</span>
+        </div>
 
         <h2 class="section-title">Publications & Articles</h2>
         <ul class="link-list">
             <li><a href="https://www.researchgate.net/profile/Ismail-Abdullah-5?ev=hdr_xprf" target="_blank">📄 Research Gate Profile</a></li>
             <li><a href="https://kurdishglobe.krd/?s=Ismail+Abdullah" target="_blank">🌍 Kurdish Globe Articles</a></li>
+            <li><a href="https://zaniary.com/profile/63e74a68077bf" target="_blank">📚 Zaniary Encyclopedia Profile</a></li>
             <li><a href="#" target="_blank">🏛️ Cahwy Kurd Center (Kurdish)</a></li>
             <li><a href="#" target="_blank">🏛️ Cahwy Kurd Center (English)</a></li>
-            <li><a href="#" target="_blank">📚 Zaniary Encyclopedia</a></li>
             <li><a href="#" target="_blank">✒️ Parnus Center</a></li>
         </ul>
 
-        <h2 class="section-title">Areas of Expertise</h2>
-        <ul style="text-align: left;">
-            <li><strong>Journalism & Media:</strong> Investigative reporting and political analysis.</li>
-            <li><strong>Translation:</strong> Professional translation (Kurdish/English/Arabic).</li>
-            <li><strong>Activism:</strong> Civil society advocacy and human rights.</li>
-            <li><strong>Literature:</strong> Authoring and editing historical and cultural texts.</li>
-        </ul>
-
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline-item">
-            <h3>Journalist & Translator</h3>
-            <span>Freelance / Various Organizations | 2018 – Present</span>
-            <p>Providing coverage on regional politics and translating key diplomatic documents.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Activist</h3>
-            <span>Erbil, Kurdistan Region</span>
-            <p>Leading community initiatives focused on cultural heritage and social development.</p>
-        </div>
-
-        <h2 class="section-title">Education</h2>
-        <div class="timeline-item">
-            <h3>Bachelor's Degree (Example)</h3>
-            <span>University Name Here | Year</span>
-        </div>
-
         <h2 class="section-title">Media & Speaking</h2>
-        <p style="text-align: left; color: #666; font-style: italic;">
-            (Photos and videos of interviews and speeches will be added here.)
+        <p style="text-align: left; color: #666; font-style: italic; background: #eee; padding: 20px; border-radius: 5px;">
+            (Gallery Coming Soon: Photos of conferences, speeches, and media appearances.)
         </p>
 
         <h2 class="section-title">Contact</h2>
         <p>I am available for collaboration, speaking engagements, and consultation.</p>
         
-        <div style="text-align: left; margin-top: 20px;">
-            <p>📧 <strong>Personal Email:</strong> <a href="mailto:ismail.abdullah8910@gmail.com" class="email-link">ismail.abdullah8910@gmail.com</a></p>
-            <p>📧 <strong>Work Email:</strong> <a href="mailto:your-work-email@example.com" class="email-link">your-work-email@example.com</a></p>
-        </div>
+        <div class="contact-info" style="margin-top: 20px;">
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +964 751 203 3907</p>
+            <p><i class="fas fa-envelope"></i> <strong>Personal:</strong> <a href="mailto:ismail.abdullah8910@gmail.com" class="email-link">ismail.abdullah8910@gmail.com</a></p>
+            </div>
 
         <div class="social-links">
             <a href="https://www.linkedin.com/in/1ismail-abdullah" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
