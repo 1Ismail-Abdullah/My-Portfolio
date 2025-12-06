@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ismail Abdullah | Professional Profile</title>
+    <title>Ismail Abdullah | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,33 +17,43 @@
         header {
             background-color: #003366; /* Diplomatic Blue */
             color: white;
-            padding: 60px 20px; /* Spacing for the header */
+            padding: 60px 20px 100px; /* Extra padding at bottom for the overlap */
             text-align: center;
         }
-        /* NEW PHOTO STYLING */
+        /* PHOTO STYLING */
         .profile-photo {
             width: 160px;
             height: 160px;
-            border-radius: 50%; /* Makes it a circle */
-            border: 4px solid white; /* White ring around photo */
+            border-radius: 50%;
+            border: 4px solid white;
             object-fit: cover;
-            margin-bottom: 20px; /* Space between photo and name */
+            margin-bottom: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            background-color: #fff;
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
+            font-weight: 700;
         }
-        .subtitle {
-            font-size: 1.2em;
-            margin-top: 10px;
+        .titles {
+            font-size: 1.1em;
+            margin-top: 5px;
             color: #bdc3c7;
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        .motto {
+            font-size: 1.0em;
+            margin-top: 10px;
+            color: #fff;
+            font-style: italic;
+            opacity: 0.9;
         }
         .container {
             max-width: 800px;
-            margin: 30px auto; /* Standard spacing below header */
+            margin: -60px auto 40px; /* Pulls box up to overlap header */
             background: white;
             padding: 40px;
             border-radius: 8px;
@@ -52,24 +63,69 @@
             color: #003366;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
-            margin-top: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: left;
         }
-        .btn {
+        /* LINKS LIST STYLING */
+        .link-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .link-list li {
+            margin-bottom: 10px;
+        }
+        .link-list a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: 600;
+            display: block;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #003366;
+            transition: 0.2s;
+        }
+        .link-list a:hover {
+            background-color: #eef6ff;
+            padding-left: 15px;
+        }
+        /* EXPERIENCE & EDUCATION ITEMS */
+        .timeline-item {
+            text-align: left;
+            margin-bottom: 20px;
+            border-left: 3px solid #ddd;
+            padding-left: 15px;
+        }
+        .timeline-item h3 { margin: 0; color: #333; }
+        .timeline-item span { color: #777; font-size: 0.9em; display: block; margin-bottom: 5px; }
+        
+        /* SOCIAL MEDIA BUTTONS */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .social-btn {
             display: inline-block;
             background-color: #003366;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
-            font-weight: bold;
+            font-size: 0.9em;
+            transition: 0.3s;
         }
+        .social-btn:hover { background-color: #002244; transform: translateY(-2px); }
+        .email-link { color: #003366; font-weight: bold; text-decoration: none; }
+
         footer {
             text-align: center;
             padding: 20px;
             color: #777;
             font-size: 0.9em;
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -79,57 +135,72 @@
         <img src="photo.jpg" alt="Ismail Abdullah" class="profile-photo">
         
         <h1>Ismail Abdullah</h1>
-        <div class="subtitle">Politician • Diplomat • Writer • Researcher</div>
+        <div class="titles">Journalist - Activist - Author - Translator</div>
+        <div class="motto">God - Homeland - Family</div>
     </header>
 
     <div class="container">
         
         <h2 class="section-title">About Me</h2>
-        <p>I am a politician and diplomat born in the historic Erbil Citadel. With a deep commitment to regional stability, I focus on international relations and infrastructure development in the Kurdistan Region.</p>
-        
-        <h2 class="section-title">Publications & Research</h2>
-        <p>My work combines diplomatic engagement with rigorous analysis. I am the author of the article:</p>
-        
-        <p style="background-color: #f0f7ff; padding: 15px; border-left: 5px solid #003366; font-weight: bold; color: #003366;">
-            "South Korean Investments in Kurdistan's Infrastructure: Assessing Long-term Benefits and Challenges"
+        <p style="text-align: left;">
+            I am a journalist, activist, and author born in the historic Erbil Citadel. With a deep commitment to truth and cultural preservation, I focus on regional stability, international relations, and literature. My work spans translation, political analysis, and advocacy for the Kurdistan Region.
         </p>
 
-        <h2 class="section-title">Areas of Expertise</h2>
-        <ul>
-            <li><strong>Diplomacy & Politics:</strong> Regional Kurdish politics and international relations.</li>
-            <li><strong>Historical Research:</strong> Specializing in WWI and WWII history.</li>
-            <li><strong>Literature:</strong> Analysis of literary themes in books and film.</li>
+        <h2 class="section-title">Publications & Articles</h2>
+        <ul class="link-list">
+            <li><a href="https://www.researchgate.net/profile/Ismail-Abdullah-5?ev=hdr_xprf" target="_blank">📄 Research Gate Profile</a></li>
+            <li><a href="https://kurdishglobe.krd/?s=Ismail+Abdullah" target="_blank">🌍 Kurdish Globe Articles</a></li>
+            <li><a href="#" target="_blank">🏛️ Cahwy Kurd Center (Kurdish)</a></li>
+            <li><a href="#" target="_blank">🏛️ Cahwy Kurd Center (English)</a></li>
+            <li><a href="#" target="_blank">📚 Zaniary Encyclopedia</a></li>
+            <li><a href="#" target="_blank">✒️ Parnus Center</a></li>
         </ul>
-<h2 class="section-title">Professional Experience</h2>
-        
-        <div style="text-align: left; margin-bottom: 20px; border-left: 4px solid #003366; padding-left: 15px;">
-            <h3 style="margin: 0; color: #333;">Diplomatic Advisor (Example Title)</h3>
-            <span style="color: #777; font-size: 0.9em;">Kurdistan Region Government | 2020 – Present</span>
-            <p style="margin-top: 5px;">Leading initiatives on international cooperation and infrastructure development.</p>
-        </div>
 
-        <div style="text-align: left; margin-bottom: 20px; border-left: 4px solid #bdc3c7; padding-left: 15px;">
-            <h3 style="margin: 0; color: #333;">Independent Researcher</h3>
-            <span style="color: #777; font-size: 0.9em;">Self-Employed | 2018 – 2020</span>
-            <p style="margin-top: 5px;">Conducted historical analysis on WWI and WWII regional impacts.</p>
+        <h2 class="section-title">Areas of Expertise</h2>
+        <ul style="text-align: left;">
+            <li><strong>Journalism & Media:</strong> Investigative reporting and political analysis.</li>
+            <li><strong>Translation:</strong> Professional translation (Kurdish/English/Arabic).</li>
+            <li><strong>Activism:</strong> Civil society advocacy and human rights.</li>
+            <li><strong>Literature:</strong> Authoring and editing historical and cultural texts.</li>
+        </ul>
+
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline-item">
+            <h3>Journalist & Translator</h3>
+            <span>Freelance / Various Organizations | 2018 – Present</span>
+            <p>Providing coverage on regional politics and translating key diplomatic documents.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Activist</h3>
+            <span>Erbil, Kurdistan Region</span>
+            <p>Leading community initiatives focused on cultural heritage and social development.</p>
         </div>
 
         <h2 class="section-title">Education</h2>
-        
-        <div style="text-align: left; margin-bottom: 15px;">
-            <h3 style="margin: 0; font-size: 1.1em;">Master of International Relations (Example)</h3>
-            <p style="margin: 0; color: #555;">Salahaddin University-Erbil | 2018</p>
+        <div class="timeline-item">
+            <h3>Bachelor's Degree (Example)</h3>
+            <span>University Name Here | Year</span>
         </div>
 
-        <div style="text-align: left; margin-bottom: 15px;">
-            <h3 style="margin: 0; font-size: 1.1em;">Bachelor of Political Science</h3>
-            <p style="margin: 0; color: #555;">University Name Here | 2015</p>
-        </div>
+        <h2 class="section-title">Media & Speaking</h2>
+        <p style="text-align: left; color: #666; font-style: italic;">
+            (Photos and videos of interviews and speeches will be added here.)
+        </p>
+
         <h2 class="section-title">Contact</h2>
-        <p>I am available for consultation and speaking engagements.</p>
-        <center>
-            <a href="mailto:your-email@example.com" class="btn">Get in Touch</a>
-        </center>
+        <p>I am available for collaboration, speaking engagements, and consultation.</p>
+        
+        <div style="text-align: left; margin-top: 20px;">
+            <p>📧 <strong>Personal Email:</strong> <a href="mailto:ismail.abdullah8910@gmail.com" class="email-link">ismail.abdullah8910@gmail.com</a></p>
+            <p>📧 <strong>Work Email:</strong> <a href="mailto:your-work-email@example.com" class="email-link">your-work-email@example.com</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/1ismail-abdullah" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://x.com/1IsmailAbdullah" target="_blank" class="social-btn"><i class="fab fa-twitter"></i> X (Twitter)</a>
+            <a href="https://linktr.ee/1Ismail.Abdullah" target="_blank" class="social-btn"><i class="fas fa-link"></i> Linktree</a>
+        </div>
+
     </div>
 
     <footer>
